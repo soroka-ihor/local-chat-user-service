@@ -10,7 +10,6 @@ public class LocalChatUserServiceApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(LocalChatUserServiceApplication.class, args);
-
     }
 
 }
