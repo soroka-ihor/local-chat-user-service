@@ -3,7 +3,7 @@ package es.local.chat.user.service.scheduled;
 //import es.local.chat.user.service.producer.MessageProducer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.kafka.support.SendResult;
+//import org.springframework.kafka.support.SendResult;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 import org.springframework.util.concurrent.ListenableFuture;
