@@ -1,13 +1,24 @@
 version: "3.7"
 services:
   user-service:
+    container_name: user-service
     image: 123123156456567567/user-service:latest
+    restart: always
+    environment:
+      - PORT=8080
+    expose:
+      - 8080
     ports:
-      - "8080:8080"
+      - 8080:8080
 
   watchtower:
-    image: containrrr/watchtower
     container_name: watchtower
+    image: containrrr/watchtower
+    environment:
+      - WATCHTOWER_CLEANUP=true
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
-    command: --interval 30
+    command: --interval 30 user-service
+networks:
+  express_nw:
+    driver: bridge

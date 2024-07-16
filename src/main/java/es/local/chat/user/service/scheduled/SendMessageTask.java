@@ -31,6 +31,7 @@ public class SendMessageTask {
 
     @Scheduled(fixedRateString = "3000")
     public void currentTime() {
+        logger.info("test ci/cd");
         logger.info(LocalDate.now().toString());
     }
 }
