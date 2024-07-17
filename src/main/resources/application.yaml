@@ -3,3 +3,6 @@
 #    bootstrap-servers: kafka:9093
 #    consumer:
 #      group-id: local-chat-group
+server:
+  servlet:
+    context-path: /api/v1/
